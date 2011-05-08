@@ -5,7 +5,7 @@
   },
   "version": "0.1",
   "author": "Ted Tibbetts",
-  "description": "Contains repo metadata for my personal addons.",
+  "description": "Adds repo locations for my personal addons to VAM's database.",
   "dependencies": {
     "vim-addon-manager": {
       "type": "git",

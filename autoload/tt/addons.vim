@@ -1,6 +1,7 @@
 " addons.vim
 " Author: Ted Tibbetts
 " License: Licensed under the same terms as Vim itself.
+" Adds repo locations for my personal addons to VAM's database.
 
 " The main use of this addon is provided by this function.
 " It adds info on the specified set of addons to VAM's repository database.

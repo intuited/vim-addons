@@ -1,4 +1,16 @@
-" Repository of my unpublished addons.
+" addons.vim
+" Author: Ted Tibbetts
+" License: Licensed under the same terms as Vim itself.
+
+" The main use of this addon is provided by this function.
+" It adds info on the specified set of addons to VAM's repository database.
+" The parameter list defaults to all categories known to this addon.
+" Those categories are named in the list |tt#addons#addons.categories|.
+function! tt#addons#UpdateVAM(...)
+  return call(g:tt#addons#addons.UpdateVAM, a:000, g:tt#addons#addons)
+endfunction
+
+
 let tt#addons#addons = {
       \ 'categories': ['unpublished'],
       \ 'unpublished': {} }
@@ -18,27 +30,3 @@ function! tt#addons#addons.UpdateVAM(...)
     call extend(g:vim_addon_manager.plugin_sources, self[category])
   endfor
 endfunction
-
-function! tt#addons#UpdateVAM(...)
-  return call(g:tt#addons#addons.UpdateVAM, a:000, g:tt#addons#addons)
-endfunction
-
-
-" Utility functions
-
-function! s:Unique(strings)
-  let dict = {}
-  for string in strings
-    let dict[string] = 1
-  endfor
-  return keys(dict)
-endfunction
-
-function! s:Chain(list)
-  let ret = []
-  for sublist in list
-    call extend(ret, sublist)
-  endfor
-  return ret
-endfunction
-

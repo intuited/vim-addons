@@ -21,9 +21,11 @@ function! s:RepoInfo(addon_name)
 endfunction
 
 call extend(tt#addons#addons.unpublished, {
-      \ 'tt_addons': s:RepoInfo('vim-addons'),
-      \ 'tt_escape': s:RepoInfo('vim-escape'),
-      \ 'tt_path':   s:RepoInfo('vim-path') })
+      \ 'tt_addons':  s:RepoInfo('vim-addons'),
+      \ 'tt_escape':  s:RepoInfo('vim-escape'),
+      \ 'tt_path':    s:RepoInfo('vim-path'),
+      \ 'UT':         s:RepoInfo('lh-vim-ut'),
+      \ 'lh-vim-lib': s:RepoInfo('lh-vim-lib') })
 
 function! tt#addons#addons.UpdateVAM(...)
   let categories = a:0 ? a:000 : self.categories

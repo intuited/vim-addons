@@ -26,6 +26,7 @@ call extend(tt#addons#addons.unpublished, {
       \ 'tt_path':    s:RepoInfo('vim-path'),
       \ 'testutils':  s:RepoInfo('vim-testutils'),
       \ 'shell_complete': s:RepoInfo('vim-shell_complete'),
+      \ 'reput':      s:RepoInfo('vim-reput'),
       \ 'UT':         s:RepoInfo('lh-vim-ut'),
       \ 'lh-vim-lib': s:RepoInfo('lh-vim-lib') })
 

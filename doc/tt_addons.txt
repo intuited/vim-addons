@@ -1,0 +1,46 @@
+*tt_addons.txt*  Adds repo locations for my personal addons to VAM's database.
+
+I've created a bunch of vim addons which are not ready for publication yet.
+
+Normally I publish them by getting them added to the database of addons for
+vim-addon-manager (VAM.)
+
+The purpose of this addon is to make the locations of my unpublished addons
+known to VAM.  This allows me to easily set up a new vim installation
+which uses these addons.
+
+More info on VAM at <http://github.com/MarcWeber/vim-addon-manager>.
+
+INSTALLATION            *tt_addons-installation*
+
+The best way to install this addon is by cloning the git repository, e.g. >
+    cd ~/vim-addons
+    git clone http://github.com/intuited/vim-addons tt_addons
+`~/vim-addons` may vary
+depending on where you're keeping your VAM-compatible addons.
+
+See |vim-addon-manager-plugin_root_dir| for more info.
+
+USAGE                   *tt_addons-usage*
+
+Once you've got it installed, you can just do >
+    :ActivateAddons tt_addons
+from within a vim session (assuming that VAM is active).
+
+After doing so, you should be able to install my unpublished addons
+by using |:ActivateAddons| normally.
+
+Note that this may make the normal locations of some addons inaccessible:
+for instance, I have had problems using some of Luc Hermitte's addons,
+so I've forked them on github and added the forks to my unpublished addons.
+
+POTENTIAL PROBLEMS    *tt_addons-wtf*
+
+I'm not entirely convinced that this will work reliably,
+especially if used in a .vimrc.
+
+If you have problems, try doing >
+    :call tt#addons#UpdateVAM('unpublished')
+<
+
+Enjoy!
